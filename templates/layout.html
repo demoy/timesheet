@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Time Sheet Application</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet/bootstrap.min.css') }}"></link>
+    </head>
+    <body>
+    <div class="container">
+        {% include 'includes/_messages.html' %}
+        {% block body %}{% endblock %}
+    </div>
+    <script src="{{ url_for('static', filename='javascript/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/jquery.min.js') }}"></script>
+    </body>
+</html>

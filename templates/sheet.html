@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Timesheet</h1>
+{% from "includes/_formhelpers.html" import render_field%}
+    <form method="POST" action="">
+        <div class="form-group">
+            {{render_field(form.work_title, class_="form-control")}}
+        </div>
+        <div class="form-group">
+            {{render_field(form.client, class_="form-control")}}
+        </div>
+                          <div class="input-group date" id="datetimepicker1">                      <input class="form-control" type="text">                      <span class="input-group-addon" style="">                          <span class="fa fa-calendar"></span>                      </span>                  </div>              
+        <p/><input type="submit" class="btn btn-primary" value="Submit"></p>
+    </form>
+    <div style="diplay:none;" id="data">{{cache}}</div>
+    <script>
+
+    </script>{% endblock %}
